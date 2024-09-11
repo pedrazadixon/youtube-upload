@@ -30,17 +30,17 @@ class YTDetailsPage(YTPage):
         self.ytcp_text_menu_cnt = 1
 
     async def had_daily_upload_limit_reached(self):
-        check_limit = await self.page.query_selector(
-            YTDetailsPage.component.daily_upload_limit_reached_xpath
-        )
+        # check_limit = await self.page.query_selector(
+        #     YTDetailsPage.component.daily_upload_limit_reached_xpath
+        # )
 
 
-        if check_limit is not None:
-            check_limit = await self.page.locator(
-                YTDetailsPage.component.daily_upload_limit_reached_xpath
-            ).text_content()
-            print(check_limit)
-            raise YTError(f"Daily upload reached {check_limit}")
+        # if check_limit is not None:
+        #     check_limit = await self.page.locator(
+        #         YTDetailsPage.component.daily_upload_limit_reached_xpath
+        #     ).text_content()
+        #     print(check_limit)
+        #     raise YTError(f"Daily upload reached {check_limit}")
         
         return None
 
