@@ -1,13 +1,13 @@
 [tool.poetry]
 name = "yt-upload"
-version = "0.2"
+version = "0.2.1"
 description = ""
 authors = ["monotirg <monotirg@gmail.com>"]
 readme = "README.md"
 repository = "https://github.com/Monotirg/youtube-upload"
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "^3.10"
 playwright = "^1.41.1"
 pydantic = "^2.6.0"
 pymediainfo = "^6.1.0"
