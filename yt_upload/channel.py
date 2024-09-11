@@ -53,6 +53,8 @@ class Channel:
             proxy=self.proxy,
             user_agent=self.user_agent,
             args=[
+                "--window-size=1920,1080",
+                "--disable-blink-features=AutomationControlled",
                 "--no-sandbox",
                 "--allow-profiles-outside-user-dir",
                 f"--profile-directory={self.profile}",

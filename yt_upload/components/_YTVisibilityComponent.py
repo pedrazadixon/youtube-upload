@@ -16,4 +16,4 @@ class YTVisibilityComponent:
     upload_video_progress_bar_xpath = "//*[@id='dialog']/div/ytcp-animatable[2]/div/div[1]/ytcp-video-upload-progress/span"
     
     save_button_xpath = "//ytcp-button[@id='done-button']"
-    close_button_xpath = "//*[@id='close-button']/div"
+    close_button_xpath = "//*[@id='close-button']/ytcp-button-shape/button"
