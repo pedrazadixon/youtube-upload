@@ -20,7 +20,7 @@ class YTVisibilityPage(YTPage):
     time_out = TimeOut
     time_sleep = TimeSleep
 
-    match_status = re.compile(r"Uploading.*%")
+    match_status = re.compile(r"Uploading\s*\d+%.*")
 
     
     def __init__(self, page: Page) -> None:
@@ -104,10 +104,11 @@ class YTVisibilityPage(YTPage):
     async def verify_upload_video(self):
         while True:
             upload_status = await self.page.locator(
-            YTVisibilityPage.component.upload_video_progress_bar_xpath
+                YTVisibilityPage.component.upload_video_progress_bar_xpath
             ).text_content()
             status = YTVisibilityPage.match_status.findall(upload_status)
-            
+            status = status[0] if status else None
+            print(f"{status}", end='\r')
             if not status:
                 break
 
