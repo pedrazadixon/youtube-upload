@@ -6,7 +6,7 @@ from .logformatter import JSONFormatter
 
 
 def setup_logging(**kwargs):
-    config_file = "yt_upload/loggers/logging_config.json"
+    config_file = "logging_config.json"
 
     with open(config_file) as f:
         config = json.load(f)
