@@ -4,9 +4,13 @@ import logging.handlers
 
 from .logformatter import JSONFormatter
 
+import os
+
+current_dir = os.path.dirname(__file__)
+config_file = os.path.join(current_dir, 'logging_config.json')
+
 
 def setup_logging(**kwargs):
-    config_file = "logging_config.json"
 
     with open(config_file) as f:
         config = json.load(f)
