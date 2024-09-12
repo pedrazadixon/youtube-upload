@@ -18,9 +18,10 @@ class YTStudioPage(YTPage):
 
     def __init__(self, page: Page, youtube_channel: str) -> None:
         self.page = page
+        self.youtube_channel = youtube_channel
 
     async def load_page(self):
-        channel_url = YTStudioPage.studio_url + "/channel/" + youtube_channel
+        channel_url = YTStudioPage.studio_url + "/channel/" + self.youtube_channel
         await self.page.goto(
             channel_url, 
             timeout=self.time_out.GLOBAL,

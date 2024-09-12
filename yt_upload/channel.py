@@ -71,7 +71,7 @@ class Channel:
         ))
     
         page = await self.context.new_page()
-        studio_page = YTStudioPage(page)
+        studio_page = YTStudioPage(page, self.youtube_channel)
         
         language = await studio_page.get_language()
 
@@ -157,7 +157,7 @@ class Channel:
     # noqa
     async def verification(self):
         page = await self.context.new_page()
-        studio_page = YTStudioPage(page)
+        studio_page = YTStudioPage(page, '')
         await studio_page.load_page()
 
         while input("Enter 'exit' after passing verification: ") != "exit":
