@@ -16,12 +16,13 @@ class YTStudioPage(YTPage):
     studio_url = "https://studio.youtube.com"
     
 
-    def __init__(self, page: Page) -> None:
+    def __init__(self, page: Page, youtube_channel: str) -> None:
         self.page = page
 
-    async def load_page(self):  
+    async def load_page(self):
+        channel_url = YTStudioPage.studio_url + "/channel/" + youtube_channel
         await self.page.goto(
-            YTStudioPage.studio_url, 
+            channel_url, 
             timeout=self.time_out.GLOBAL,
             wait_until='domcontentloaded'
         )

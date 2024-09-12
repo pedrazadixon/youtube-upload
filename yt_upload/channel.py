@@ -118,7 +118,7 @@ class Channel:
             }
         }
 
-        await YTStudioStateGroup.start(YTStudioPage(page), video, self.log_data)
+        await YTStudioStateGroup.start(YTStudioPage(page, self.youtube_channel), video, self.log_data)
         await YTDetailsStateGroup.start(YTDetailsPage(page), video, self.log_data)
         await YTVisibilityStateGroup.start(YTVisibilityPage(page), video, self.log_data)
         await page.close()
