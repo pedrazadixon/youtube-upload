@@ -82,7 +82,7 @@ class YTDetailsComponent:
     license_item_by_index_xpath = "//*[@id='text-item-{index}']"
     
     # components to set category
-    category_show_paper_list_button_xpath = "//html/body/ytcp-uploads-dialog/tp-yt-paper-dialog/div/ytcp-animatable[1]/ytcp-ve/ytcp-video-metadata-editor/div/ytcp-video-metadata-editor-advanced/div[11]/div[3]/ytcp-form-select/ytcp-select/ytcp-text-dropdown-trigger/ytcp-dropdown-trigger/div/div[3]/tp-yt-iron-icon"
+    category_show_paper_list_button_xpath = "//html/body/ytcp-uploads-dialog/tp-yt-paper-dialog/div/ytcp-animatable[1]/ytcp-ve/ytcp-video-metadata-editor/div/ytcp-video-metadata-editor-advanced/div[12]/div[3]/ytcp-form-select/ytcp-select/ytcp-text-dropdown-trigger/ytcp-dropdown-trigger/div/div[3]/tp-yt-iron-icon"
     category_items_xpath = "//*[@id='dialog']"
     category_item_xpath = "//ytcp-ve"
     category_item_title_xpath = "//tp-yt-paper-item-body/div/div/div/yt-formatted-string"
