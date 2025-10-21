@@ -12,7 +12,7 @@ class YTStudioComponent:
     english_item_text = "English (US)"
     
     # create button
-    create_button_xpath = "//*[@id='create-icon']"
+    create_button_xpath = "//button[@aria-label='Create']"
     
     # upload video
     upload_videos_button_xpath = "//*[@id='text-item-0']/ytcp-ve"
