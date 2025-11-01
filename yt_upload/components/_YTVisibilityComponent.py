@@ -9,7 +9,7 @@ class YTVisibilityComponent:
     public_radio_button_xpath = "//tp-yt-paper-radio-button[@name='PUBLIC']//div[@id='radioContainer']"
     
     schedule_show_button_xpath = "//div[@id='second-container']//ytcp-icon-button"
-    schedule_date_button_xpath = "//ytcp-text-dropdown-trigger[@id='datepicker-trigger']//tp-yt-iron-icon"
+    schedule_date_button_xpath = "//ytcp-text-dropdown-trigger[@id='datepicker-trigger']"
     schedule_date_input_xpath = "//ytcp-date-picker//tp-yt-paper-dialog//form//input"
     schedule_time_input_xpath = "//form//tp-yt-paper-input//input"
     
